@@ -7,16 +7,16 @@ USE test;
 -- Example 1
 -- CONCAT combines multiple expressions on a row by row basis outputing a result for each row
 
- select CONCAT(id, ' ง ', title)
+ select CONCAT(id, ' ยง ', title)
   from album;
 
-	--*** Results:
-	--  3 ง Rubber Soul
-	-- 13 ง Birds of Fire
-	-- 14 ง Kind of Blue
-	-- 16 ง Live And
-	-- 17 ง Apostrophe
-	-- 18 ง Kind of Blue
+	--****** Results:   ******
+	--  3 ยง Rubber Soul
+	-- 13 ยง Birds of Fire
+	-- 14 ยง Kind of Blue
+	-- 16 ยง Live And
+	-- 17 ยง Apostrophe
+	-- 18 ยง Kind of Blue
 
 
 ---- Get column names from information_schema table (useful for building scripts)
@@ -39,7 +39,7 @@ USE test;
   from information_schema.columns where table_name = 'album';
 
 
-	  --*** Results:
+	  --****** Results:   ******
 	  -- SELECT 
 	  -- case when id <> id then mismatch else null end as id,
 	  -- case when title <> title then mismatch else null end as title,
